@@ -1,0 +1,321 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.app-container {
+    display: flex;
+    height: 100vh;
+}
+.sidebar {
+    flex: 0 0 auto; 
+    width: 150px;
+    min-height: 100vh; /* Set a minimum height */
+    height: auto; /* Set height to auto when dropdown is open */
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+
+.main-bar {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    margin: 20px;
+}
+
+.office-assets-list {
+    list-style: none;
+    padding: 0;
+}
+
+.category-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px 0;
+    width: 100%;
+    text-align: left;
+}
+
+.items-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.items-list li {
+    padding: 5px;
+    cursor: pointer;
+}
+.items-list li:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+.items-list li.selected-type {
+    background-color: #f0f0f0; /* Highlight selected type */
+}
+
+.assets-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.asset-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.asset-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px; /* Increased margin */
+}
+
+.asset-item button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 8px 16px; /* Increased padding */
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px; /* Increased font size */
+}
+
+.asset-item button:hover {
+    background-color: #c82333;
+}
+
+.item-details {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0%;
+  }
+  
+  .item-details table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .item-details th,
+  .item-details td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .item-details th {
+    background-color: #f2f2f2;
+  }
+  
+  /* New styles for the header and controls */
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .controls {
+    display: flex;
+    align-items: center;
+  }
+/* item-details.css */
+
+/* Style for the search bar container */
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  
+  /* Style for the search input */
+  .search-bar input[type="text"] {
+    flex: 1; /* Take remaining space */
+    border: none;
+    outline: none;
+  }
+  
+  /* Style for the search icon */
+  .search-bar i {
+    margin-left: 5px; /* Add some spacing between input and icon */
+  }
+  
+
+
+
+  .asset-management {
+    margin-top: auto;
+  }
+  
+  .form-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .form-field {
+    flex: 0 0 calc(33.33% - 10px); /* Adjust the width of each field */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-field label {
+    margin-bottom: 5px;
+  }
+  
+  .form-field input[type="text"],input[type="date"],
+  .form-field select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .btn-value {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-value:hover {
+    background-color: #0056b3;
+  }
+  
+
+
+  .error {
+    color: red;
+    font-size: 12px;
+  }
+
+
+  /* ItemDetails.css */
+
+.item-details {
+  margin: 20px;
+  margin-top: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.heading {
+  margin: 0;
+}
+
+.search-bar {
+  margin-right: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+}
+
+.export-button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px; /* Add margin-right to create space */
+}
+
+.add-button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.export-button:hover {
+  background-color: #0056b3;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+td img {
+  max-width: 100px;
+  max-height: 100px;
+}
+.image-preview {
+  margin-top: 30px;
+  margin-left: -200%;
+}
+
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap:10px;
+}
+
+.image-container {
+  margin-bottom: 10px;
+  height: auto;
+}
+
+.uploaded-image {
+  max-width: 100%;
+  max-height: 150px; /* Adjust the maximum height as needed */
+  display: block;
+  margin: 0 auto; /* Center the image horizontally */
+  border-radius: 5px; /* Add rounded corners */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.cancel-button {
+  display: none; /* Initially hide the cancel button */
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 3px;
+  background-color: rgba(255, 0, 0, 0.7);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.image-container:hover .cancel-button {
+  display: block; /* Show the cancel button on hover */
+}
