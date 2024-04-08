@@ -91,9 +91,6 @@ const LoginScreen = () => {
 
     return (
         <div className="login-container">
-            {loggedIn ? (
-                <WebpageContent />
-            ) : (
                 <div className='insidePage'>
                     <div className="header">
                         <div className="header-content">
@@ -176,7 +173,7 @@ const LoginScreen = () => {
                         
                     </div>
                 </div>
-            )}
+            
         </div>
     );
 }

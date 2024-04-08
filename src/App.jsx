@@ -24,7 +24,7 @@ function App() {
   return (
     <div className="app-container">
       {
-        location.pathname !== '/login' && (
+        location.pathname !== '/login' || location.pathname !== '/' (
           <aside className="sidebar-wrap">
         <OfficeAssetsList onItemClick={handleItemClick} />
       </aside>
@@ -33,7 +33,7 @@ function App() {
       
       <main className="main-bar">
        
-          <Routes>
+          <Routes  >
 
           {/* LoginScreen */}
 
@@ -43,9 +43,15 @@ function App() {
               element={<LoginScreen />}
             />
 
-            <Route
+<Route
               exact
               path="/"
+              element={<LoginScreen />}
+            />
+
+            <Route
+              exact
+              path="/details"
               element={<ItemDetails item={selectedItem} />}
             />
             
