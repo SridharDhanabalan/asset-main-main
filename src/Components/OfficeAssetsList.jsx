@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Dropdown } from "antd";
 import { useNavigate } from "react-router-dom";
 
-
 /* function AddGroupForm({ onAddGroup }) {
    // const [groupName, setGroupName] = useState('');
     //const [showInput, setShowInput] = useState(false);
@@ -41,6 +40,8 @@ import { useNavigate } from "react-router-dom";
 
 function OfficeAssetsList({ onItemClick }) {
     const navigate = useNavigate();
+
+
     const [hoveredCategory, setHoveredCategory] = useState(null);
     const [clickedCategory, setClickedCategory] = useState(null);
     const [groups, setGroups] = useState([
@@ -81,7 +82,7 @@ function OfficeAssetsList({ onItemClick }) {
     return (
         <div className="sidebar">
             <h1>AMS</h1>
-            <h4>Asset Management System</h4>
+            <h4>Asset Management System </h4>
             <ul className="office-assets-list">
                 {groups.map((assetCategory, index) => (
                     <li

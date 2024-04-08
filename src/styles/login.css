@@ -1,0 +1,163 @@
+/* Base styles */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    animation: fadeIn 0.5s ease; /* Fade in animation */
+}
+
+/* Header styles */
+.header {
+    width: 400px;
+    padding: 71.5px 39px 48.1px 49px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    animation: slideInFromTop 0.5s ease; /* Slide in from top animation */
+}
+
+/* Input group styles */
+.input-group {
+    height: 60px;
+    background-color: #fff;
+    animation: slideInFromLeft 0.5s ease; /* Slide in from left animation */
+}
+
+/* Checkbox styles */
+.checkbox {
+    margin-top: 10px;
+    width: 100%;
+    animation: slideInFromLeft 0.5s ease; /* Slide in from right animation */
+}
+
+/* Login button styles */
+.login-btn {
+    width: 150px;
+    height: 60px;
+    margin: 39px auto 0 auto; /* Updated for center alignment */
+    padding: 21px 51px;
+    border-radius: 3px;
+    background-color: #7fc149;
+    animation: slideInFromLeft 0.5s ease; /* Slide in from bottom animation */
+}
+
+/* Logo text styles */
+.logo-text {
+    text-align: center;
+    animation: fadeIn 0.5s ease; /* Fade in animation */
+}
+
+/* Logo text main styles */
+.logo-text-main {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    animation: colorChange 2s infinite; /* Color change animation */
+}
+
+/* Logo text sub styles */
+.logo-text-sub {
+    font-size: 18px;
+    color: #666;
+    animation: colorChange 2s infinite alternate; /* Color change animation */
+}
+
+/* Additional adjustments for responsiveness */
+@media only screen and (max-width: 768px) {
+    .header {
+        width: 69%;
+        padding: 50px;
+    }
+
+    .input-group {
+        width: 95%;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .subheading-right {
+        margin-top: 15px;
+    }
+}
+
+/* Media query for smaller devices */
+@media only screen and (max-width: 576px) {
+    .header {
+        text-align: center;
+    }
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        color: #333;
+    }
+    50% {
+        color: #7fc149;
+    }
+    100% {
+        color: #333;
+    }
+}
+/* Input field animation */
+#email,
+#password {
+    border: solid 2px #85bf47;
+    padding: 5px;
+    animation: slideInFromLeft 0.5s ease; /* Slide in from right animation */
+}
+
+/* Media query for iPads and screens between 1000px and 1200px */
+@media only screen and (min-width: 1000px) and (max-width: 1200px) {
+    body {
+        overflow-x: hidden;
+    }
+}

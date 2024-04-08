@@ -1,6 +1,6 @@
 // ItemDetails.jsx
 import React from 'react';
-import '../styles/theme.css';
+// import '../styles/theme.css';
 import { useNavigate } from "react-router-dom";
 import AddEmployee from './AddEmployee';
 

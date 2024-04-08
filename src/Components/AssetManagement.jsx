@@ -74,6 +74,25 @@ function AssetManagement({ setAsset }) {
     return Object.keys(newErrors).length === 0;
   };
 
+  function AssetManagement({ setAsset }) {
+    const { url } = useRouteMatch();
+    const navigate = useNavigate();
+  
+    // Your form data and state management logic here
+    
+    if (url.includes('login')) {
+      return <LoginScreen />;
+    } else if (url.includes('asset-management')) {
+      return (
+        <div className="asset-management">
+          <h2>Enter Asset Details</h2>
+          {/* Your AssetManagement component JSX */}
+        </div>
+      );
+    } else {
+      return <NoMatch />;
+    }
+  }
   const handleAddAsset = () => {
     const isValid = validateForm();
     if (isValid) {
@@ -98,6 +117,7 @@ function AssetManagement({ setAsset }) {
   };
   
   return (
+    
     <div className="asset-management">
       <h2>Enter Asset Details</h2>
       <div className="form-container">
